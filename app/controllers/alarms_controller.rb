@@ -3,8 +3,9 @@ class AlarmsController < ApplicationController
   
   # make a new upvote attached to alarm
   def upvote
-    @alarm = Alarm.find(params[:id])
-    @alarm.upvotes.create
+    # @alarm = Alarm.find(params[:id])
+    @alarm = params[:alarm]
+    @alarm.upvotes.create.save
     redirect_to(root_path)
   end
 

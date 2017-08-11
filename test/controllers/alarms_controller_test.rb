@@ -18,11 +18,11 @@ class AlarmsControllerTest < ActionDispatch::IntegrationTest
   end
   
   test "user can upvote alarm" do
-    post upvote_alarm_url, params: {alarm: @alarm} 
+    post upvote_url, params: {alarm: @alarm} 
     # skip
   end
   
-  test "alarm shows default upvote count" do
+  test "alarm shows default upvote count on load" do
     skip
   end
   
