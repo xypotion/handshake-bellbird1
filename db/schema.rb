@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170811162832) do
+ActiveRecord::Schema.define(version: 20170811165632) do
 
   create_table "alarms", force: :cascade do |t|
     t.text "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "upvotes", force: :cascade do |t|
+    t.integer "alarm_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

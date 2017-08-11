@@ -16,14 +16,18 @@ test cases:
 		- unicode works
 		- codey characters rejected and/or html tags stripped
 	- user not alerted to same alarms multiple times?
+	- non-XSS security testing? injecting alarms/upvotes outside of system?
 - when adding votes:
 	- default alarm score is 0
   - user can upvote alarm; score is retained on reload
 	- user can upvote multiple alarms, multiple times?
-* automate all + test all manually
+* automate all (unless impossible) + test all manually
   - use fixture data?
 
-testing goals: ...perfection? no bugs, i guess.
+testing goals: 
+- ...perfection? no bugs, i guess.
+- app developed with TDD whenever possible
+- verified secure by security testing
 
 testing assumptions:
 - user identities don't matter
