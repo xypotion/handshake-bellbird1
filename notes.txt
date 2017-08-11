@@ -1,0 +1,32 @@
+design:
+- alarms = 1 message, many upvotes
+- upvote belongs to alarm
+
+test cases:
+- basic. user can...
+  - see list of all alarms
+  - create alarm & it is created
+	- delete alarm & it is deleted
+	- edit alarm & it is edited
+	- user A instantly sees alarm created by user B
+- edge/advanced
+  - two users can see each other's alarms?
+	- message validation... 
+	  - <= 255 characters
+		- unicode works
+		- codey characters rejected and/or html tags stripped
+	- user not alerted to same alarms multiple times?
+- when adding votes:
+	- default alarm score is 0
+  - user can upvote alarm; score is retained on reload
+	- user can upvote multiple alarms, multiple times?
+* automate all + test all manually
+  - use fixture data?
+
+testing goals: ...perfection? no bugs, i guess.
+
+testing assumptions:
+- user identities don't matter
+- all users are on Mac OSX. heh
+? all users are on Chrome? or what does minitest use?
+? dev, staging, and production environments are equivalent?
