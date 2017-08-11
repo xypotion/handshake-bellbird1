@@ -5,7 +5,24 @@ class AlarmsControllerTest < ActionDispatch::IntegrationTest
     @alarm = alarms(:one)
   end
   
+  test "dings when there is one alarm" do
+    skip
+  end
+  
+  test "dings when there are multiple alarms" do
+    skip
+  end
+  
+  test "doesn't ding when there are no alarms" do
+    skip
+  end
+  
   test "user can upvote alarm" do
+    skip
+  end
+  
+  test "alarms show upvote count" do
+    skip
   end
   
   #auto-generated tests below

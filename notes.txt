@@ -1,21 +1,24 @@
 design:
 - alarms = 1 message, many upvotes
 - upvote belongs to alarm. user cannot access /upvotes or other upvote paths
-- alert user on /alarms (or /) reload if there's a new alarm, after reloading (no ajax)
+- alert user on /alarms (or /) reload if there's an alarm, after reloading (no ajax)
   - and/or play a sound?
 	- ...or pretend you're playing a sound :/
 
 test cases:
 - basic. user can...
-  - see list of all alarms
+  √ see list of all alarms
   - create alarm & it is created
 	- delete alarm & it is deleted
 	- edit alarm & it is edited
 	- user A sees most recent alarm created on page load (popup?)
 - message validation... 
-  - <= 200 characters
-	- unicode works
+  √ <= 200 characters
+	√ unicode works
 	- codey characters rejected and/or html tags stripped
+- bell sound:
+  - ding when 1 or more alarms
+	- no ding when no alarms
 - edge/advanced
   - two users can see each other's alarms?
 	- user not alerted to same alarms multiple times?
