@@ -36,5 +36,11 @@ class AlarmTest < ActiveSupport::TestCase
   test "angle brackets are stripped from message" do
     alarm = Alarm.new(message: "<tag>hello</tag>")
     skip
+    # "taghello/tag"
+  end
+  
+  test "default upvote count is 0" do
+    alarm = Alarm.new(message: "doesn't matter")
+    assert_equal alarm.upvotes.size, 0
   end
 end
