@@ -1,6 +1,9 @@
 design:
 - alarms = 1 message, many upvotes
-- upvote belongs to alarm
+- upvote belongs to alarm. user cannot access /upvotes or other upvote paths
+- alert user on /alarms (or /) reload if there's a new alarm, after reloading (no ajax)
+  - and/or play a sound?
+	- ...or pretend you're playing a sound :/
 
 test cases:
 - basic. user can...
@@ -8,15 +11,16 @@ test cases:
   - create alarm & it is created
 	- delete alarm & it is deleted
 	- edit alarm & it is edited
-	- user A instantly sees alarm created by user B
+	- user A sees most recent alarm created on page load (popup?)
+- message validation... 
+  - <= 200 characters
+	- unicode works
+	- codey characters rejected and/or html tags stripped
 - edge/advanced
   - two users can see each other's alarms?
-	- message validation... 
-	  - <= 255 characters
-		- unicode works
-		- codey characters rejected and/or html tags stripped
 	- user not alerted to same alarms multiple times?
 	- non-XSS security testing? injecting alarms/upvotes outside of system?
+	- if no alarms exist, no popup on page load
 - when adding votes:
 	- default alarm score is 0
   - user can upvote alarm; score is retained on reload
@@ -25,7 +29,7 @@ test cases:
   - use fixture data?
 
 testing goals: 
-- ...perfection? no bugs, i guess.
+- no bugs (user can make alarms & upvote them)
 - app developed with TDD whenever possible
 - verified secure by security testing
 
@@ -34,3 +38,8 @@ testing assumptions:
 - all users are on Mac OSX. heh
 ? all users are on Chrome? or what does minitest use?
 ? dev, staging, and production environments are equivalent?
+
+where did i get stuck?
+- ajax for alarms (live-updating is hard, i think. and even alert popups require ajax?)
+- minitest capabilities. can i verify page contents or not? can i verify that there's a popup?
+- playing sound on the page: not sure how to test this via script

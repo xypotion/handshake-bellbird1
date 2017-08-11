@@ -2,7 +2,8 @@ require 'test_helper'
 
 class UpvotesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @upvote = upvotes(:one)
+    @alarm = alarms(:one)
+    @upvote = upvotes(:one) #added
   end
   
   #auto-generated tests below
@@ -19,6 +20,7 @@ class UpvotesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create upvote" do
     assert_difference('Upvote.count') do
+      post alarms_url, params: { alarm: { message: @alarm.message } } #added
       post upvotes_url, params: { upvote: { alarm_id: @upvote.alarm_id } }
     end
 

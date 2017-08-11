@@ -5,6 +5,9 @@ class AlarmsControllerTest < ActionDispatch::IntegrationTest
     @alarm = alarms(:one)
   end
   
+  test "user can upvote alarm" do
+  end
+  
   #auto-generated tests below
 
   test "should get index" do
