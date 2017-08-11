@@ -1,5 +1,12 @@
 class AlarmsController < ApplicationController
   before_action :set_alarm, only: [:show, :edit, :update, :destroy]
+  
+  # make a new upvote attached to alarm
+  def upvote
+    @alarm = Alarm.find(params[:id])
+    @alarm.upvotes.create
+    redirect_to(root_path)
+  end
 
   # GET /alarms
   # GET /alarms.json

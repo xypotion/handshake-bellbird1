@@ -1,6 +1,6 @@
 design:
-- alarms = 1 message, many upvotes
-- upvote belongs to alarm. user cannot access /upvotes or other upvote paths
+√ alarms = 1 message, many upvotes
+√ upvote belongs to alarm. user cannot access /upvotes or other upvote paths
 - alert user on /alarms (or /) reload if there's an alarm, after reloading (no ajax)
   - and/or play a sound?
 	- ...or pretend you're playing a sound :/
@@ -46,3 +46,4 @@ where did i get stuck?
 - ajax for alarms (live-updating is hard, i think. and even alert popups require ajax?)
 - minitest capabilities. can i verify page contents or not? can i verify that there's a popup?
 - playing sound on the page: not sure how to test this via script
+- upvotes: harder than i expected
